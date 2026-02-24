@@ -44,7 +44,7 @@ final class AudioDetectionService {
     /// Export a specific audio attachment to a temporary file.
     func exportAudioFile(attachment: AudioAttachment) async throws -> URL {
         let tempDir = FileManager.default.temporaryDirectory
-            .appendingPathComponent("NotesPlus_Audio", isDirectory: true)
+            .appendingPathComponent("MacInNotes_Audio", isDirectory: true)
 
         try FileManager.default.createDirectory(at: tempDir, withIntermediateDirectories: true)
 
@@ -89,7 +89,7 @@ final class AudioDetectionService {
     /// Clean up temporary audio files.
     func cleanupTemporaryFiles() {
         let tempDir = FileManager.default.temporaryDirectory
-            .appendingPathComponent("NotesPlus_Audio", isDirectory: true)
+            .appendingPathComponent("MacInNotes_Audio", isDirectory: true)
 
         try? FileManager.default.removeItem(at: tempDir)
     }

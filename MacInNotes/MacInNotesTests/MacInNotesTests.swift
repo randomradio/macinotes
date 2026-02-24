@@ -1,7 +1,7 @@
 import XCTest
-@testable import NotesPlus
+@testable import MacInNotes
 
-final class NotesPlusTests: XCTestCase {
+final class MacInNotesTests: XCTestCase {
 
     // MARK: - MarkdownTrigger Tests
 

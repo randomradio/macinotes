@@ -1,4 +1,4 @@
-# NotesPlus
+# MacInNotes
 
 A macOS native app that enhances Apple Notes with Markdown shortcuts, slash commands, and audio transcription.
 
@@ -59,11 +59,11 @@ Transcribe audio attachments in your notes to editable text using Apple Speech F
 brew install xcodegen
 
 # Generate the Xcode project
-cd NotesPlus
+cd MacInNotes
 xcodegen generate
 
 # Open in Xcode
-open NotesPlus.xcodeproj
+open MacInNotes.xcodeproj
 ```
 
 Then build and run with `Cmd+R` in Xcode.
@@ -73,16 +73,16 @@ Then build and run with `Cmd+R` in Xcode.
 You can also create a new Xcode project manually:
 
 1. Create a new macOS App project in Xcode (SwiftUI, Swift)
-2. Copy all files from `NotesPlus/` into the project
-3. Add `Info.plist` and `NotesPlus.entitlements` to the target
+2. Copy all files from `MacInNotes/` into the project
+3. Add `Info.plist` and `MacInNotes.entitlements` to the target
 4. Set deployment target to macOS 13.0
 
 ## Architecture
 
 ```
-NotesPlus/
+MacInNotes/
 ├── App/
-│   ├── NotesPlusApp.swift          # SwiftUI App entry point
+│   ├── MacInNotesApp.swift          # SwiftUI App entry point
 │   ├── AppDelegate.swift           # Menu bar setup, service lifecycle
 │   └── AppState.swift              # Global observable state
 ├── Models/
@@ -109,7 +109,7 @@ NotesPlus/
 │   └── Extensions.swift            # Swift extensions
 └── Resources/
     ├── Info.plist
-    ├── NotesPlus.entitlements
+    ├── MacInNotes.entitlements
     └── Assets.xcassets/
 ```
 
@@ -123,4 +123,4 @@ NotesPlus/
 
 ## License
 
-Copyright 2026 NotesPlus. All rights reserved.
+Copyright 2026 MacInNotes. All rights reserved.

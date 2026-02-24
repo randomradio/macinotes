@@ -9,26 +9,26 @@ struct OnboardingView: View {
     private let steps = [
         OnboardingStep(
             icon: "hand.wave",
-            title: "Welcome to NotesPlus",
+            title: "Welcome to MacInNotes",
             description: "Enhance Apple Notes with Markdown shortcuts, slash commands, and audio transcription.",
             actionLabel: nil
         ),
         OnboardingStep(
             icon: "lock.shield",
             title: "Accessibility Permission",
-            description: "NotesPlus needs Accessibility access to read and format text in Apple Notes. This is required for Markdown shortcuts and slash commands to work.",
+            description: "MacInNotes needs Accessibility access to read and format text in Apple Notes. This is required for Markdown shortcuts and slash commands to work.",
             actionLabel: "Open Accessibility Settings"
         ),
         OnboardingStep(
             icon: "waveform",
             title: "Speech Recognition",
-            description: "To transcribe audio recordings in your notes, NotesPlus needs permission to use Speech Recognition. This is optional — you can enable it later.",
+            description: "To transcribe audio recordings in your notes, MacInNotes needs permission to use Speech Recognition. This is optional — you can enable it later.",
             actionLabel: "Enable Speech Recognition"
         ),
         OnboardingStep(
             icon: "checkmark.circle",
             title: "You're All Set!",
-            description: "NotesPlus is ready. Look for the icon in your menu bar. Open Apple Notes and start typing Markdown or slash commands!",
+            description: "MacInNotes is ready. Look for the icon in your menu bar. Open Apple Notes and start typing Markdown or slash commands!",
             actionLabel: nil
         ),
     ]

@@ -188,7 +188,7 @@ struct SettingsView: View {
                 .font(.system(size: 48))
                 .foregroundColor(.accentColor)
 
-            Text("NotesPlus")
+            Text("MacInNotes")
                 .font(.title)
                 .fontWeight(.bold)
 

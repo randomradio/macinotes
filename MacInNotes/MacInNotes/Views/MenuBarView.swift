@@ -43,7 +43,7 @@ struct MenuBarView: View {
                 .foregroundColor(.accentColor)
 
             VStack(alignment: .leading, spacing: 2) {
-                Text("NotesPlus")
+                Text("MacInNotes")
                     .font(.headline)
                 Text("v1.0.0")
                     .font(.caption)

@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct NotesPlusApp: App {
+struct MacInNotesApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject private var appState = AppState.shared
 

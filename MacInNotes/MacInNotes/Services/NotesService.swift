@@ -129,7 +129,7 @@ final class NotesService {
     /// Export audio attachments from the current note to a temporary directory.
     func exportAudioAttachments() async -> [URL] {
         let tempDir = FileManager.default.temporaryDirectory
-            .appendingPathComponent("NotesPlus_Audio", isDirectory: true)
+            .appendingPathComponent("MacInNotes_Audio", isDirectory: true)
 
         try? FileManager.default.createDirectory(at: tempDir, withIntermediateDirectories: true)
 

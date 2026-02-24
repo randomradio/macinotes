@@ -11,9 +11,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>NotesPlus</string>
+	<string>MacInNotes</string>
 	<key>CFBundleDisplayName</key>
-	<string>NotesPlus</string>
+	<string>MacInNotes</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -27,15 +27,15 @@
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2026 NotesPlus. All rights reserved.</string>
+	<string>Copyright © 2026 MacInNotes. All rights reserved.</string>
 
 	<!-- Privacy Usage Descriptions -->
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>NotesPlus uses speech recognition to transcribe audio recordings in your notes into editable text.</string>
+	<string>MacInNotes uses speech recognition to transcribe audio recordings in your notes into editable text.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>NotesPlus needs microphone access to support live audio transcription.</string>
+	<string>MacInNotes needs microphone access to support live audio transcription.</string>
 	<key>NSAppleEventsUsageDescription</key>
-	<string>NotesPlus uses AppleScript to read and modify content in Apple Notes, enabling Markdown conversion and text insertion.</string>
+	<string>MacInNotes uses AppleScript to read and modify content in Apple Notes, enabling Markdown conversion and text insertion.</string>
 
 	<!-- Scripting -->
 	<key>NSAppleScriptEnabled</key>

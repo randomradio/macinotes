@@ -1,6 +1,6 @@
-name: NotesPlus
+name: MacInNotes
 options:
-  bundleIdPrefix: com.notesplus
+  bundleIdPrefix: com.macinnotes
   deploymentTarget:
     macOS: "13.0"
   xcodeVersion: "15.0"
@@ -14,29 +14,29 @@ settings:
     CURRENT_PROJECT_VERSION: "1"
 
 targets:
-  NotesPlus:
+  MacInNotes:
     type: application
     platform: macOS
     sources:
-      - NotesPlus
+      - MacInNotes
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.notesplus.app
-        INFOPLIST_FILE: NotesPlus/Resources/Info.plist
-        CODE_SIGN_ENTITLEMENTS: NotesPlus/Resources/NotesPlus.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.macinnotes.app
+        INFOPLIST_FILE: MacInNotes/Resources/Info.plist
+        CODE_SIGN_ENTITLEMENTS: MacInNotes/Resources/MacInNotes.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         COMBINE_HIDPI_IMAGES: true
         LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
     info:
-      path: NotesPlus/Resources/Info.plist
+      path: MacInNotes/Resources/Info.plist
 
-  NotesPlusTests:
+  MacInNotesTests:
     type: bundle.unit-test
     platform: macOS
     sources:
-      - NotesPlusTests
+      - MacInNotesTests
     dependencies:
-      - target: NotesPlus
+      - target: MacInNotes
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.notesplus.tests
+        PRODUCT_BUNDLE_IDENTIFIER: com.macinnotes.tests

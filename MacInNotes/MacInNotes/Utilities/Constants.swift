@@ -4,9 +4,9 @@ import Foundation
 enum Constants {
     /// App metadata.
     enum App {
-        static let name = "NotesPlus"
+        static let name = "MacInNotes"
         static let version = "1.0.0"
-        static let bundleIdentifier = "com.notesplus.app"
+        static let bundleIdentifier = "com.macinnotes.app"
         static let minimumMacOSVersion = "13.0"
     }
 
@@ -29,7 +29,7 @@ enum Constants {
     /// Supported audio formats for transcription.
     enum Audio {
         static let supportedExtensions = ["m4a", "mp3", "wav", "aac", "caf", "aiff"]
-        static let tempDirectoryName = "NotesPlus_Audio"
+        static let tempDirectoryName = "MacInNotes_Audio"
     }
 
     /// Default transcription settings.
