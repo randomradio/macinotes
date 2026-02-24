@@ -1,4 +1,5 @@
 import SwiftUI
+import Carbon.HIToolbox
 
 /// Floating popover that displays slash commands for quick insertion.
 struct SlashCommandPopoverView: View {
@@ -8,6 +9,7 @@ struct SlashCommandPopoverView: View {
 
     @State private var searchText = ""
     @State private var selectedIndex = 0
+    @State private var keyMonitor: Any?
 
     private var filteredCommands: [SlashCommand] {
         if searchText.isEmpty {
@@ -84,37 +86,43 @@ struct SlashCommandPopoverView: View {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.gray.opacity(0.2), lineWidth: 1)
         )
-        .onKeyPress(phases: .down) { press in
-            handleKeyPress(press)
+        .onAppear { installKeyMonitor() }
+        .onDisappear { removeKeyMonitor() }
+    }
+
+    // MARK: - Keyboard Handling (macOS 13+)
+
+    private func installKeyMonitor() {
+        keyMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
+            switch Int(event.keyCode) {
+            case kVK_UpArrow:
+                if selectedIndex > 0 { selectedIndex -= 1 }
+                return nil
+
+            case kVK_DownArrow:
+                if selectedIndex < filteredCommands.count - 1 { selectedIndex += 1 }
+                return nil
+
+            case kVK_Escape:
+                onDismiss()
+                return nil
+
+            case kVK_Return:
+                if let command = filteredCommands[safe: selectedIndex] {
+                    onSelect(command)
+                }
+                return nil
+
+            default:
+                return event
+            }
         }
     }
 
-    private func handleKeyPress(_ press: KeyPress) -> KeyPress.Result {
-        switch press.key {
-        case .upArrow:
-            if selectedIndex > 0 {
-                selectedIndex -= 1
-            }
-            return .handled
-
-        case .downArrow:
-            if selectedIndex < filteredCommands.count - 1 {
-                selectedIndex += 1
-            }
-            return .handled
-
-        case .escape:
-            onDismiss()
-            return .handled
-
-        case .return:
-            if let command = filteredCommands[safe: selectedIndex] {
-                onSelect(command)
-            }
-            return .handled
-
-        default:
-            return .ignored
+    private func removeKeyMonitor() {
+        if let monitor = keyMonitor {
+            NSEvent.removeMonitor(monitor)
+            keyMonitor = nil
         }
     }
 }
